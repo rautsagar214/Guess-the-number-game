@@ -21,15 +21,13 @@ body{
     position: relative;
     top: 50vw;
 }
-/* .swagat{
-    margin-top: -1070vh;
-    margin-left: 47%;
-    margin-bottom: 40vh;
-} */
-
-.name{
-    /* width: 20vw; */
+ .swagat{
+    height: -500vh;
 }
+
+/* .name{ */
+    /* width: 20vw; */
+/* } */
 
 .nickname{
     /* margin-top: -1000vh; */
@@ -50,9 +48,34 @@ body{
     box-shadow: 0px 4px 10px 0px rgb(95, 92, 92)inset;
     border: none;
 }
+ .indexpage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 80px;
+ }
+ .mobile-hand-thinking{
+    height: -100vh;
+    /* margin-top: ; */
+
+ }
+
 @media all and (min-width:350px) and (max-width:800px){
 .indexpage{
     display: flex;
     flex-direction: column;
+    gap: 0;
 }
+.swagat{
+    height: 30vh;
 }
+.nickname{
+    width: 300px;
+}
+.mobile-hand-thinking{
+height: 40vh;
+/* margin-top: 10px; */
+}
+
+
