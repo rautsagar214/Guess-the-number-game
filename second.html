@@ -25,8 +25,17 @@
         </H3>
         
         <div>
-            <button>CONTINUE</button>
+            <button   id="continue-button" >CONTINUE</button>
         </div>
     </div>
 </body>
 </html>
+
+<script  >
+    // second page adding onclick to continue button 
+const continueButton = document.getElementById("continue-button")
+continueButton.onclick =()=>{
+    window.location.href= "./third.html"
+}
+
+</script>

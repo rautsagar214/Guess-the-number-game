@@ -11,10 +11,31 @@
         <img src="Group 6.png"alt="">
     </div>
     <div  class="level"  >
-        <button>EASY</button>
-        <BUtton>MEDIUM</BUtton>
-        <BUtton>HARD</BUtton>
+        <button id="easy" >EASY</button>
+        <BUtton id="medium" >MEDIUM</BUtton>
+        <BUtton id="hard" >HARD</BUtton>
     </div>
     
 </body>
 </html>
+<script >
+const easyLevel = document.getElementById("easy")
+const mediumLevel = document.getElementById("medium")
+const hardLevel = document.getElementById("hard")
+
+easyLevel.onclick = ()=>{
+    localStorage.setItem("Level","Easy")
+    window.location.href="./four.html"
+}
+
+mediumLevel.onclick = ()=>{
+    localStorage.setItem("Level","Medium" )
+    window.location.href="./four.html"
+}
+
+hardLevel.onclick = ()=>{
+    localStorage.setItem("Level","Hard" )
+    window.location.href="./four.html"
+}
+
+</script>
