@@ -7,13 +7,14 @@ var textbox = document.querySelector(".nickname")
 
 
 
-// form.onsubmit=()=>{
-// localStorage.setItem("name",textbox.value);
-// window.location.href="./second.html"
-// // startButton.onclick = () =>{
-// //     window.location.href="./second.html"
-// }
-// }
+form.onsubmit=()=>{
+localStorage.setItem("name",textbox.value);
+window.location.href="./second.html"
+// startButton.onclick = () =>{
+//     window.location.href="./second.html"
+return false
+}
+
 
 // startButton.addEventListener("click",()=>{
 //     if (textbox.value==""){

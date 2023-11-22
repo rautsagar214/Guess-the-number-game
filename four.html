@@ -45,6 +45,25 @@
     #randomNumber{
         font-size: 40px;
     }
+    span{
+        color: blue;
+    }
+    #greater{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+
+    }
+    #smaller{
+        display: flex;
+        flex-direction: column;
+    }
+    #hint{
+        display: flex;
+        gap: 300px;
+        margin-left: 120px;
+        margin-top: -50vh;
+    }
 
     @media all and (min-width:350px) and (max-width:800px){
         body{
@@ -74,14 +93,20 @@
         .row{
             margin-bottom: -15px;
         }
-        .check{
-            width: 65px;
+        #check{
+            width: 75px;
         }
         #randomNumber{
             margin-bottom: 100px;
         }
         .clear{
             width: 60px;
+        }
+        #back-button{
+            height: 30px;
+            width: 30px;
+            margin-left: -1vh;
+
         }
     }
     
@@ -133,6 +158,20 @@
         </h1>
 
         <img   src="Group 8.png" class="four-img-2">
+       <div id="hint" >
+
+           <div  id="greater" >
+               <span> hello </span>
+               <span>hello</span>
+               <span>hello</span>
+            </div>
+            <div id="smaller" >
+                <span>bolo</span>
+                <span>bolo</span>
+                <span>bolo</span>
+            </div>
+        </div>
+
     </div>
     
 </body>
