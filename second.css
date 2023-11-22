@@ -1,0 +1,14 @@
+body{
+    /* justify-content: center; */
+    /* text-align: center; */
+}
+li{
+    color: white;
+}
+
+.INSTRUCTIONS{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 10%;
+}

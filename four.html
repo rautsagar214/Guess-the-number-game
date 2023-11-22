@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        /* display: -ms-inline-grid; */
+        /* column-gap: 100px; */
+        /* row-gap: 100px; */
+        height: 60px;
+        width: 80px;
+        gap: 30px;
+    }
+    .number{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        /* display: flex; */
+        margin-top:-90%;
+        margin-left:-165px;
+        /* margin-bottom: 10%; */
+
+        
+    }
+    body{
+        display: flex;
+        justify-content: space-around;
+        /* align-items: center; */
+        text-align: center;
+    }
+    .check{
+        border-radius: 10px;
+    }
+    .four-img{
+        height: 100vh;
+
+    }
+    #randomNumber{
+        font-size: 40px;
+    }
+
+    @media all and (min-width:350px) and (max-width:800px){
+        body{
+            flex-direction: column;
+            justify-content: center;
+            padding: 5px;
+        }
+        .four-img{
+            height: 50vh;
+        }
+        button{
+            width: 50px;
+            height: 40px;
+            /* margin-top: -20px; */
+        }
+        .four-img-2{
+            width: 365px;
+        }
+        .number{
+            margin-left: -100px;
+            margin-bottom: 15px;
+            margin-top: -305px;
+        }
+        h1{
+            font-size: 22px;
+        }
+        .row{
+            margin-bottom: -15px;
+        }
+        .check{
+            width: 65px;
+        }
+        #randomNumber{
+            margin-bottom: 100px;
+        }
+    }
+    
+</style>
+
+
+
+<body style="background-color: black;" >
+    <div class="image-div">
+        <img  class="four-img" src="Group 7.png"   alt="">  <br>
+        <div class="number">
+            <span id="randomNumber">100</span>
+            
+
+            <div class="row">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+            </div>
+            <br>
+            <div class="row">
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+            </div>
+            <br>
+            <div class="row">
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+            </div>
+            <br>
+            <div class="row">
+                <button>0</button>
+                <button>CLEAR</button>
+            </div>
+            <br>
+            <button  class="check" >CHECK</button> 
+            <br>
+            <br>
+            
+        </div>   
+    </div>
+    <div  >
+        <h1 style="color: white;">
+            
+            GUESS THE NUMBER TO <br> UNLOCK THE PHONE AND <br> SEE THE PICTURE !
+        </h1>
+
+        <img src="Group 8.png" class="four-img-2">
+    </div>
+    
+</body>
+</html>
