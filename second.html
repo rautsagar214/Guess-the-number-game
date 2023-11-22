@@ -7,6 +7,7 @@
     <title>INSTRUCTIONS</title>
 </head>
 <body  style="background-color: black;"   >
+     <img src="left-arrow.png" alt="" id="back-button" >
     <div class="INSTRUCTIONS">
 
         <h1  style="color: green;">GUESS THE NUMBER</h1>
@@ -36,6 +37,11 @@
 const continueButton = document.getElementById("continue-button")
 continueButton.onclick =()=>{
     window.location.href= "./third.html"
+}
+
+const backButton = document.getElementById("back-button")
+backButton.onclick=()=>{
+    window.location.href="./index.html"
 }
 
 </script>

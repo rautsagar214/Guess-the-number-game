@@ -23,3 +23,6 @@ button{
     color: purple;
     background-color: beige;
 }
+#back-button{
+    height: 40px;
+}

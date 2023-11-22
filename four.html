@@ -31,13 +31,17 @@
         /* align-items: center; */
         text-align: center;
     }
-    .check{
+    #check{
         border-radius: 10px;
     }
     .four-img{
         height: 100vh;
 
     }
+    #back-button{
+    height: 40px;
+    margin-left:-60px;
+}
     #randomNumber{
         font-size: 40px;
     }
@@ -86,6 +90,7 @@
 
 
 <body style="background-color: black;" >
+    <img  id="back-button" src="left-arrow.png" alt="">
     <div class="image-div">
         <img  class="four-img" src="Group 7.png"   alt="">  <br>
         <div class="number">
@@ -115,7 +120,7 @@
                 <button  class="clear" >CLEAR</button>
             </div>
             <br>
-            <button  class="check" >CHECK</button> 
+            <button  id="check" >CHECK</button> 
             <br>
             <br>
             
@@ -134,5 +139,14 @@
 </html>
 
 <script>
-    
+    const backButton = document.getElementById("back-button")
+backButton.onclick=()=>{
+    window.location.href="./third.html"
+}
+
+const Check = document.getElementById("check") 
+    Check.onclick=()=>{
+        window.location.href="over.html"
+    }
+
 </script>

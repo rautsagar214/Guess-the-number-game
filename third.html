@@ -7,6 +7,7 @@
     <title>LEVEL</title>
 </head>
 <body style="background-color: black;" >
+    <img  id="back-button" src="left-arrow.png" alt="">
     <div class="choose-the-level" >
         <img src="Group 6.png"alt="">
     </div>
@@ -36,6 +37,10 @@ mediumLevel.onclick = ()=>{
 hardLevel.onclick = ()=>{
     localStorage.setItem("Level","Hard" )
     window.location.href="./four.html"
+}
+const backButton = document.getElementById("back-button")
+backButton.onclick=()=>{
+    window.location.href="./second.html"
 }
 
 </script>
