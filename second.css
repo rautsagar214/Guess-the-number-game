@@ -7,7 +7,7 @@ li{
 }
 
 .INSTRUCTIONS{
-    justify-content: center;
+    justify-content: start;
     text-align: center;
     align-items: center;
     margin-top: 10%;
@@ -25,4 +25,9 @@ button{
 }
 #back-button{
     height: 40px;
+}
+ol{
+    text-align: start;
+    margin-left: 13vw;
+    font-size: 2.2vw;
 }

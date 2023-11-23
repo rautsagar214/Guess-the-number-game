@@ -12,18 +12,21 @@
 
         <h1  style="color: green;">GUESS THE NUMBER</h1>
         <H2 style="color: white;" >INSTRUCTIONS</H2>
-        <H3 style="color: white;" >
-           1. In this game you have to guess the correct number which is predicted by computer.
-           <br>
-           <br>
-            2.User have to guess the number in three moves and in given time.
-            <br>
-            <br>
-            3.On every wrong move user will get  a hint and the live will be decreased.
-            <br>
-            <br>
-            4.If user complete the task before moves and time end then user will win yhe game
-        </H3>
+        <!-- <H3 style="color: white;" > -->
+            <ol style="color: white;">
+
+               <li> In this game you have to guess the correct number which is predicted by computer.</li>
+                
+                
+                <li>User have to guess the number in three moves and in given time.</li>
+                
+                
+                <li>On every wrong move user will get  a hint and the live will be decreased.</li>
+                
+            
+                <li>If user complete the task before moves and time end then user will win yhe game</li>
+            </ol>
+        <!-- </H3> -->
         
         <div>
             <button   id="continue-button" >CONTINUE</button>
@@ -36,6 +39,8 @@
     // second page adding onclick to continue button 
 const continueButton = document.getElementById("continue-button")
 continueButton.onclick =()=>{
+    var audio=new Audio("./button-8-88355.mp3")
+audio.play()
     window.location.href= "./third.html"
 }
 

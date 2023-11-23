@@ -37,6 +37,12 @@
     gap: 350px;
 
 }
+#winner-img-1{
+  height: 100px;
+}
+.hat{
+    border: 2px solid white;
+}
 @media all and (min-width:350px)and (max-width:800px){
     .body{
         /* display: flex; */
@@ -48,6 +54,7 @@
     }
     .hat{
         height:200px ;
+        /* position: relative; */
     
         
     }
@@ -59,15 +66,19 @@
 
 </style>
 <body style="background-color: black;">
+    
   <div class="last-page" >
 
-    <div class="result-image" >
-      <img   class="hat" src="moha-removebg-preview.png" alt="">
+
+      <div class="result-image" >
+          <img   class="hat" src="Group 9.png"   height="500px" alt="">
+          
+
     </div>
     
     <div>
         
-            <h1 style="color: white;" >THE CORRECT NUMBER IS <SPAN>78 <br></SPAN>YOU TOOK <SPAN>2 </SPAN> MOVES TO FINISH</h1>
+            <h1 style="color: white;" >THE CORRECT NUMBER IS <SPAN id="correct-number" > <br></SPAN> <br>YOU TOOK <SPAN></SPAN> MOVES TO FINISH</h1>
         
 
         <h1   style="color: white;" style="height: 500px;" > GAME OVER  </h1>
@@ -83,4 +94,5 @@
     replay.onclick = ()=>{
         window.location.href="./third.html"
     }
+    document.getElementById("correct-number").innerHTML=localStorage.getItem("correct-number")
     </script>

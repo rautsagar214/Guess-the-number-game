@@ -13,6 +13,9 @@
         height: 60px;
         width: 80px;
         gap: 30px;
+        background-color: burlywood;
+        box-shadow: 0px 2px 5px 0px rgb(0, 0, 0)inset;
+        border-radius: 5px;
     }
     .number{
         justify-content: center;
@@ -30,6 +33,7 @@
         justify-content: space-around;
         /* align-items: center; */
         text-align: center;
+        position: relative;
     }
     #check{
         border-radius: 10px;
@@ -40,13 +44,20 @@
     }
     #back-button{
     height: 40px;
-    margin-left:-60px;
+    margin-left:-50px;
 }
     #randomNumber{
         font-size: 40px;
+        /* position:sticky; */
+        overflow: hidden;
+    
+
     }
     span{
         color: blue;
+        /* display: none; */
+        /* white-space:nowrap; */
+        height: 40px;
     }
     #greater{
         display: flex;
@@ -63,6 +74,27 @@
         gap: 300px;
         margin-left: 120px;
         margin-top: -50vh;
+    }
+    .live-div{
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* text-align: center; */
+        /* margin-top: -60vh; */
+        /* margin-left: 100px; */
+        position: absolute;
+        top: 50px ;
+        left: 230px;
+        font-size: 20px;
+    }
+    #randomNumber-div{
+        position: absolute;
+        top:160px ;
+        left: 216px;
+        /* border: 2px solid black; */
+        height: 80px;
+        width: 300px;
+        overflow: auto;
     }
 
     @media all and (min-width:350px) and (max-width:800px){
@@ -113,6 +145,20 @@
             margin-top:-20vh;
             margin-left: 12vh;
         }
+        #randomNumber{
+            font-size: 5vw;
+        }
+        .live-div{
+            margin-top: 1%;
+    margin-left: -142px;
+    position: absolute;
+    top: 50px;
+    left: 230px;
+    font-size: 9px;
+        }
+        h1{
+            margin-top: 12%;
+        }
     }
     
 </style>
@@ -121,39 +167,47 @@
 
 <body style="background-color: black;" >
     <img  id="back-button" src="left-arrow.png" alt="">
+    <div class="live-div" >
+       LIVES  : <span id="lives" ></span>
+    </div>
     <div class="image-div">
         <img  class="four-img" src="Group 7.png"   alt="">  <br>
         <div class="number">
-            <span id="randomNumber">100</span>
-            
+            <div id="randomNumber-div" >
 
-            <div class="row">
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
+                <span id="randomNumber"  ></span>
+            </div>
+            
+            <div id="number-pad" >
+
+                <div class="row">
+                    <button id="1" >1</button>
+                    <button id="2" >2</button>
+                <button id="3" >3</button>
             </div>
             <br>
             <div class="row">
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
+                <button id="4" >4</button>
+                <button id="5" >5</button>
+                <button  id="6" >6</button>
             </div>
             <br>
             <div class="row">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
+                <button id="7" >7</button>
+                <button  id="8" >8</button>
+                <button id="9" >9</button>
             </div>
             <br>
             <div class="row">
-                <button>0</button>
-                <button  class="clear" >CLEAR</button>
+                <button  id="0" >0</button>
+                <button  class="clear"  id="clear" >CLEAR</button>
             </div>
             <br>
             <button  id="check" >CHECK</button> 
             <br>
             <br>
             
+        </div>
         </div>   
     </div>
     <div  >
@@ -166,14 +220,30 @@
        <div id="hint" >
 
            <div  id="greater" >
-               <span> hello </span>
-               <span>hello</span>
-               <span>hello</span>
+               <span id="greaterHint1" >  </span>
+               <span id="greaterHint2" >  </span>
+               <span id="greaterHint3" >  </span>
+               <span id="greaterHint4" >  </span>
+               <span id="greaterHint5" >  </span>
+               <span id="greaterHint6" >  </span>
+               <span id="greaterHint7" >  </span>
+               <span id="greaterHint8" >  </span>
+               <span id="greaterHint9" >  </span>
+               <span id="greaterHint10" >  </span>
+               
+            
             </div>
             <div id="smaller" >
-                <span>bolo</span>
-                <span>bolo</span>
-                <span>bolo</span>
+                <span  id="smallerHint1" ></span>
+                <span id="smallerHint2" ></span>
+                <span  id="smallerHint3" ></span>
+                <span  id="smallerHint4" ></span>
+                <span  id="smallerHint5" ></span>
+                <span  id="smallerHint6" ></span>
+                <span  id="smallerHint7" ></span>
+                <span  id="smallerHint8" ></span>
+                <span  id="smallerHint9" ></span>
+                <span  id="smallerHint10" ></span>
             </div>
         </div>
 
@@ -183,6 +253,40 @@
 </html>
 
 <script>
+
+var computerNumber;
+var greaterHintNumber=1
+var smallerHintNumber=1
+var lives;
+if(
+    localStorage.getItem("Level")=="Easy"
+){
+    lives=5
+     computerNumber = generateRandomNumber(1,10)
+     localStorage.setItem("correct-number",computerNumber)
+
+    console.log(computerNumber)
+}
+else if (
+    localStorage.getItem("Level")=="Medium"
+){
+    lives=8
+    computerNumber = generateRandomNumber(1,50)
+    localStorage.setItem("correct-number",computerNumber)
+
+    console.log(computerNumber)
+}
+else if(
+    localStorage.getItem("Level")=="Hard"
+){
+    lives=10
+    computerNumber=generateRandomNumber(1,100)
+    localStorage.setItem("correct-number",computerNumber)
+
+    console.log(computerNumber)
+}
+
+document.getElementById("lives").innerHTML=lives
     const backButton = document.getElementById("back-button")
 backButton.onclick=()=>{
     window.location.href="./third.html"
@@ -190,7 +294,100 @@ backButton.onclick=()=>{
 
 const Check = document.getElementById("check") 
     Check.onclick=()=>{
-        window.location.href="over.html"
+        
+    if ( 
+        output.innerHTML==computerNumber
+        
+    ){
+        console.log("correct")
+        window.location.href="./over.html"
     }
+    else if (output.innerHTML<computerNumber){
+        document.getElementById(`greaterHint${greaterHintNumber}`).innerHTML=output.innerHTML
+       greaterHintNumber++
+       lives--
+     document.getElementById("lives").innerHTML=lives
+     if (lives==0){
+        window.location.href="./over.html"
+     }
+    }
+    else if (output.innerHTML>computerNumber){
+        document.getElementById(`smallerHint${smallerHintNumber}`).innerHTML=output.innerHTML
+       smallerHintNumber++
+
+       lives--
+     document.getElementById("lives").innerHTML=lives
+     if (lives==0){
+        window.location.href="./over.html"
+     }
+     
+    }
+    output.innerHTML=""
+
+    }
+
+
+    const Row = document.querySelector("row")
+
+    var  one = document.getElementById("1")
+     one.onclick=()=>{
+        output.innerHTML+= one.innerHTML
+     }
+
+
+
+    var  two = document.getElementById("2")
+    two.onclick=()=>{
+        output.innerHTML+=two.innerHTML
+    }
+    var  three = document.getElementById("3")
+       three.onclick=()=>{
+        output.innerHTML+=three.innerHTML
+       }
+    var  four = document.getElementById("4")
+    four.onclick=()=>{
+        output.innerHTML+=four.innerHTML
+    }
+    var  five = document.getElementById("5")
+    five.onclick=()=>{
+        output.innerHTML+=five.innerHTML
+    }
+    var  six = document.getElementById("6")
+    six.onclick=()=>{
+        output.innerHTML+=six.innerHTML
+    }
+    var  seven = document.getElementById("7")
+    seven.onclick=()=>{
+        output.innerHTML+=seven.innerHTML
+    }
+    var  eight = document.getElementById("8")
+    eight.onclick=()=>{
+        output.innerHTML+=eight.innerHTML
+    }
+
+    var  nine = document.getElementById("9")
+    nine.onclick=()=>{
+        output.innerHTML+=nine.innerHTML
+    }
+
+    var  zero = document.getElementById("0")
+    zero.onclick=()=>{
+        output.innerHTML+=zero.innerHTML
+    }
+
+    var  clear = document.getElementById("clear")
+    clear.onclick=()=>{
+        output.innerHTML = ""
+    }
+    
+    const output = document.getElementById("randomNumber")
+
+
+function generateRandomNumber(min,max){
+    return Math.floor(Math.random()*(max-min+1))+min;
+}
+
+
+
 
 </script>
