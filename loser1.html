@@ -80,14 +80,14 @@ button{
 
 
       <div class="result-image" >
-          <img   class="hat" src="Group 9.png"   height="500px" alt="">
+          <img   class="hat" src="Group 11.png"   height="500px" alt="">
           
 
     </div>
     
     <div>
         
-            <h1   style="color: white;" style="height: 500px;" > GAME OVER  </h1> <br>
+            <h1   style="color: white;" style="height: 500px;" > GAME OVER  <br> <span id="phra"  style="color: white;" ></span> <br><span id="user-name" ></span> </h1> <br>
             <h1 style="color: white;" >THE CORRECT NUMBER IS <SPAN id="correct-number" > <br></SPAN> <br>YOU TOOK <SPAN id="moves"></SPAN> MOVES TO FINISH</h1>
             <br>
             
@@ -99,10 +99,18 @@ button{
 </html>
 
 <script>
+    phrases =["Bounce Back Stronger!","Better Luck Next Round.","Game Well Played."]
     const  replay = document.getElementById("REPLY")
     replay.onclick = ()=>{
         window.location.href="./third.html"
     }
     document.getElementById("correct-number").innerHTML=localStorage.getItem("correct-number")
     document.getElementById("moves").innerHTML=localStorage.getItem("moves")
+
+var randomphr = Math.floor(Math.random()*phrases.length)
+document.getElementById("phra").innerHTML=phrases[randomphr]
+
+var user =   document.getElementById("user-name")
+user.innerHTML=localStorage.getItem("name")
+
     </script>

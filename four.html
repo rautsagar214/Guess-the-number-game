@@ -164,6 +164,7 @@
         }
         #randomNumber{
             font-size: 5vw;
+            /* left: 33px; */
         }
         .live-div{
             margin-top: 1%;
@@ -177,13 +178,30 @@
             margin-top: 12%;
         }
         #number-pad{
-            margin-top: 10%;
+            /* margin-top: 10%; */
+            margin-top: -60%;
+    margin-left: -10%;
         }
         .total{
             margin-left: 38px;
             flex-direction: column;
             gap: 0;
             margin-left: 100px;
+        }
+        #randomNumber-div{
+            left: 72px;
+            overflow: auto;
+            width: 200px;
+        }
+        .four-img-2{
+            margin-left: -22px;
+            width: 300px;
+        }
+        #greater{
+            font-size: 16vw;
+        }
+        #smaller{
+            font-size: 50vw;
         }
         
     }
@@ -277,6 +295,7 @@
         
     </div>
 </div>
+<audio src="./Ukulele-and-Piano(chosic.com).mp3"autoplay id="background-music" ></audio>
     
 </body>
 </html>
@@ -288,6 +307,7 @@ var greaterHintNumber=1
 var smallerHintNumber=1
 var lives;
 var moves = 0;
+var audio
 if(
     localStorage.getItem("Level")=="Easy"
 ){
@@ -322,11 +342,15 @@ else if(
 document.getElementById("lives").innerHTML=lives
     const backButton = document.getElementById("back-button")
 backButton.onclick=()=>{
+    var audio=new Audio("./button-8-88355.mp3")
+audio.play()
     window.location.href="./third.html"
 }
 
 const Check = document.getElementById("check") 
     Check.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         moves++
     if ( 
         output.innerHTML==computerNumber
@@ -334,9 +358,11 @@ const Check = document.getElementById("check")
     ){
         console.log("correct")
         localStorage.setItem("moves" , moves)
-        window.location.href="./over.html"
+        window.location.href="./winner1.html"
     }
     else if (output.innerHTML<computerNumber){
+        var audio=new Audio("./surprised-child-voice-sound-113127.mp3")
+        audio.play()
         document.getElementById(`greaterHint${greaterHintNumber}`).innerHTML=output.innerHTML
        greaterHintNumber++
        lives--
@@ -344,19 +370,20 @@ const Check = document.getElementById("check")
      if (lives==0){
         localStorage.setItem("moves" , moves)
 
-        window.location.href="./over.html"
+        window.location.href="./loser1.html"
      }
     }
     else if (output.innerHTML>computerNumber){
+        var audio=new Audio("./surprised-child-voice-sound-113127.mp3")
+        audio.play()
         document.getElementById(`smallerHint${smallerHintNumber}`).innerHTML=output.innerHTML
        smallerHintNumber++
-
        lives--
      document.getElementById("lives").innerHTML=lives
      if (lives==0){
         localStorage.setItem("moves" , moves)
 
-        window.location.href="./over.html"
+        window.location.href="./winner1.html"
      }
      
     }
@@ -369,6 +396,8 @@ const Check = document.getElementById("check")
 
     var  one = document.getElementById("1")
      one.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+= one.innerHTML
      }
 
@@ -376,45 +405,65 @@ const Check = document.getElementById("check")
 
     var  two = document.getElementById("2")
     two.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+=two.innerHTML
     }
     var  three = document.getElementById("3")
        three.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+=three.innerHTML
        }
     var  four = document.getElementById("4")
     four.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+=four.innerHTML
     }
     var  five = document.getElementById("5")
     five.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+=five.innerHTML
     }
     var  six = document.getElementById("6")
     six.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+=six.innerHTML
     }
     var  seven = document.getElementById("7")
     seven.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+=seven.innerHTML
     }
     var  eight = document.getElementById("8")
     eight.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+=eight.innerHTML
     }
 
     var  nine = document.getElementById("9")
     nine.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+=nine.innerHTML
     }
 
     var  zero = document.getElementById("0")
     zero.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML+=zero.innerHTML
     }
 
     var  clear = document.getElementById("clear")
     clear.onclick=()=>{
+        var audio=new Audio("./button-8-88355.mp3")
+audio.play()
         output.innerHTML = ""
     }
     
@@ -424,7 +473,13 @@ const Check = document.getElementById("check")
 function generateRandomNumber(min,max){
     return Math.floor(Math.random()*(max-min+1))+min;
 }
+window.addEventListener("DOMContentLoaded",()=>{
+    var backGroundMusic = document.getElementById("background-music")
+    Audio.volume=0.5
+    Audio.loop=true;
+    
 
+})
 
 
 
