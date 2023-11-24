@@ -40,7 +40,7 @@
     }
     .four-img{
         height: 100vh;
-
+        /* margin-right: 100px; */
     }
     #back-button{
     height: 40px;
@@ -50,11 +50,9 @@
         font-size: 40px;
         /* position:sticky; */
         overflow: hidden;
-    
-
     }
     span{
-        color: blue;
+        color: red;
         /* display: none; */
         /* white-space:nowrap; */
         height: 40px;
@@ -83,18 +81,37 @@
         /* margin-top: -60vh; */
         /* margin-left: 100px; */
         position: absolute;
-        top: 50px ;
-        left: 230px;
+        top: 65px ;
+        left: 265px;
         font-size: 20px;
+        border: 2px solid white;
+        color: red;
     }
     #randomNumber-div{
         position: absolute;
-        top:160px ;
-        left: 216px;
-        /* border: 2px solid black; */
+        top:220px ;
+        left: 240px;
         height: 80px;
         width: 300px;
         overflow: auto;
+        color: red;
+    }
+    #number-pad{
+        margin-top: 10%;
+    }
+    .total{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    #greater span , #smaller span{
+        font-size: 2vw;
+    }
+
+    h1{
+        font-size: 1.2vw;
     }
 
     @media all and (min-width:350px) and (max-width:800px){
@@ -104,15 +121,15 @@
             padding: 5px;
         }
         .four-img{
-            height: 40vh;
+            height: 65vh;
         }
         button{
-            width: 35px;
-            height: 30px;
+            width: 53px;
+            height: 43px;
             /* margin-top: -20px; */
         }
         .four-img-2{
-            width: 280px;
+            width: 470px;
         }
         .number{
             margin-left: -80px;
@@ -120,7 +137,7 @@
             margin-top: -245px;
         }
         h1{
-            font-size: 22px;
+            font-size: 5.8vw;
         }
         .row{
             margin-bottom: -15px;
@@ -150,15 +167,25 @@
         }
         .live-div{
             margin-top: 1%;
-    margin-left: -142px;
-    position: absolute;
-    top: 50px;
-    left: 230px;
-    font-size: 9px;
+            margin-left: -128px;
+            position: absolute;
+            top: 50px;
+            left: 230px;
+            font-size: 9px;
         }
         h1{
             margin-top: 12%;
         }
+        #number-pad{
+            margin-top: 10%;
+        }
+        .total{
+            margin-left: 38px;
+            flex-direction: column;
+            gap: 0;
+            margin-left: 100px;
+        }
+        
     }
     
 </style>
@@ -167,27 +194,27 @@
 
 <body style="background-color: black;" >
     <img  id="back-button" src="left-arrow.png" alt="">
-    <div class="live-div" >
-       LIVES  : <span id="lives" ></span>
+    <div class="total" >
+
+        <div class="live-div" >
+            LIVES  : <span id="lives" ></span>
     </div>
     <div class="image-div">
         <img  class="four-img" src="Group 7.png"   alt="">  <br>
         <div class="number">
             <div id="randomNumber-div" >
-
-                <span id="randomNumber"  ></span>
+                <span id="randomNumber"></span>
             </div>
             
             <div id="number-pad" >
-
-                <div class="row">
+                    <div class="row">
                     <button id="1" >1</button>
                     <button id="2" >2</button>
-                <button id="3" >3</button>
-            </div>
-            <br>
-            <div class="row">
-                <button id="4" >4</button>
+                    <button id="3" >3</button>
+                </div>
+                <br>
+                <div class="row">
+                    <button id="4" >4</button>
                 <button id="5" >5</button>
                 <button  id="6" >6</button>
             </div>
@@ -208,13 +235,14 @@
             <br>
             
         </div>
-        </div>   
-    </div>
-    <div  >
-        <h1 style="color: white;">
+    </div>   
+</div>
+    <div>
+        <h1 style="color: white">
             
-            GUESS THE NUMBER TO <br> UNLOCK THE PHONE AND <br> SEE THE PICTURE !
+            GUESS THE NUMBER TO UNLOCK THE PHONE AND <br> SEE THE PICTURE ! <br><br> Range : <span id="range"></span> 
         </h1>
+        <br>
 
         <img   src="Group 8.png" class="four-img-2">
        <div id="hint" >
@@ -231,7 +259,7 @@
                <span id="greaterHint9" >  </span>
                <span id="greaterHint10" >  </span>
                
-            
+               
             </div>
             <div id="smaller" >
                 <span  id="smallerHint1" ></span>
@@ -246,8 +274,9 @@
                 <span  id="smallerHint10" ></span>
             </div>
         </div>
-
+        
     </div>
+</div>
     
 </body>
 </html>
@@ -258,9 +287,11 @@ var computerNumber;
 var greaterHintNumber=1
 var smallerHintNumber=1
 var lives;
+var moves = 0;
 if(
     localStorage.getItem("Level")=="Easy"
 ){
+    document.getElementById("range").innerHTML = "1 to 10"
     lives=5
      computerNumber = generateRandomNumber(1,10)
      localStorage.setItem("correct-number",computerNumber)
@@ -270,6 +301,7 @@ if(
 else if (
     localStorage.getItem("Level")=="Medium"
 ){
+    document.getElementById("range").innerHTML = "1 to 50"
     lives=8
     computerNumber = generateRandomNumber(1,50)
     localStorage.setItem("correct-number",computerNumber)
@@ -279,6 +311,7 @@ else if (
 else if(
     localStorage.getItem("Level")=="Hard"
 ){
+    document.getElementById("range").innerHTML = "1 to 100"
     lives=10
     computerNumber=generateRandomNumber(1,100)
     localStorage.setItem("correct-number",computerNumber)
@@ -294,12 +327,13 @@ backButton.onclick=()=>{
 
 const Check = document.getElementById("check") 
     Check.onclick=()=>{
-        
+        moves++
     if ( 
         output.innerHTML==computerNumber
         
     ){
         console.log("correct")
+        localStorage.setItem("moves" , moves)
         window.location.href="./over.html"
     }
     else if (output.innerHTML<computerNumber){
@@ -308,6 +342,8 @@ const Check = document.getElementById("check")
        lives--
      document.getElementById("lives").innerHTML=lives
      if (lives==0){
+        localStorage.setItem("moves" , moves)
+
         window.location.href="./over.html"
      }
     }
@@ -318,6 +354,8 @@ const Check = document.getElementById("check")
        lives--
      document.getElementById("lives").innerHTML=lives
      if (lives==0){
+        localStorage.setItem("moves" , moves)
+
         window.location.href="./over.html"
      }
      
