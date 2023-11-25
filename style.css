@@ -21,7 +21,7 @@ body{
     position: relative;
     top: 50vw;
 }
- .swagat{
+ .swagat-img{
     height: -500vh;
 }
 
@@ -68,7 +68,7 @@ body{
     flex-direction: column;
     gap: 0;
 }
-.swagat{
+.swagat-img{
     height: 20vh;
 }
 .name{

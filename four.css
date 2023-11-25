@@ -27,6 +27,7 @@
     }
     #check{
         border-radius: 10px;
+        background-color: lightgreen;
     }
     .four-img{
         height: 100vh;
@@ -183,10 +184,11 @@
             margin-left: 25vw;
         }
         #randomNumber-div{
-            left: 11vw;
+            left: 16vw;
             overflow: auto;
-            width: 50vw;
-            top: 41vw;
+            width: 40vw;
+            top: 43vw;
+            height: 26px;
         }
         .four-img-2{
             margin-left: -24vw;
