@@ -1,9 +1,9 @@
 // second page adding onclick to continue button 
 // sound effect added to the button when it click
 const continueButton = document.getElementById("continue-button")
+var audio=new Audio("./ASSET/button-8-88355.mp3")
 continueButton.onclick =()=>{
-    var audio=new Audio("./button-8-88355.mp3")
-audio.play()
+    audio.play()
     window.location.href= "./third.html"
 }
 
@@ -11,16 +11,16 @@ audio.play()
 // to add sound effect when click on it 
 const backButton = document.getElementById("back-button")
 backButton.onclick=()=>{
-    var audio=new Audio("./button-8-88355.mp3")
-audio.play()
+    // var audio=new Audio("./ASSET/button-8-88355.mp3")
+    audio.play()
     window.location.href="./index.html"
 }
 
 // to add a background music
 window.addEventListener("DOMContentLoaded",()=>{
     var backGroundMusic = document.getElementById("background-music")
-    Audio.volume=0.5
-    Audio.loop=true;
+    // backGroundMusic.volume=0.5
+    // backGroundMusic.loop=true;
     
 
 })

@@ -1,9 +1,12 @@
+
+
+// Here we keep phrases in the array and 
 phrases = ["You're a Champion!","Victory is Yours!","Bravo!"]
 var randomphr = Math.floor(Math.random()*phrases.length)
 document.getElementById("phra").innerHTML = phrases[randomphr]
 const  replay = document.getElementById("REPLY")
 replay.onclick = ()=>{
-    var audio=new Audio("./button-8-88355.mp3")
+    var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
     window.location.href="./third.html"
 }

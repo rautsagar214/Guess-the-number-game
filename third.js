@@ -7,7 +7,7 @@ const hardLevel = document.getElementById("hard")
 // to add sound effect when click on it 
 easyLevel.onclick = ()=>{
     localStorage.setItem("Level","Easy")
-    var audio=new Audio("./button-8-88355.mp3")
+    var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
     window.location.href="./four.html"
 }
@@ -16,7 +16,7 @@ audio.play()
 // to add sound effect when click on it 
 mediumLevel.onclick = ()=>{
     localStorage.setItem("Level","Medium" )
-    var audio=new Audio("./button-8-88355.mp3")
+    var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
     window.location.href="./four.html"
 }
@@ -25,7 +25,7 @@ audio.play()
 // to add sound effect when click on it 
 hardLevel.onclick = ()=>{
     localStorage.setItem("Level","Hard" )
-    var audio=new Audio("./button-8-88355.mp3")
+    var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
     window.location.href="./four.html"
 }
@@ -34,7 +34,7 @@ audio.play()
 // to add sound effect when click on it
 const backButton = document.getElementById("back-button")
 backButton.onclick=()=>{
-    var audio=new Audio("./button-8-88355.mp3")
+    var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
     window.location.href="./second.html"
 }

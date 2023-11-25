@@ -71,7 +71,7 @@ audio.play()
         window.location.href="./winner1.html"
     }
     else if (output.innerHTML<computerNumber){
-        var audio=new Audio("./surprised-child-voice-sound-113127.mp3")
+        var audio=new Audio("./ASSET/surprised-child-voice-sound-113127.mp3")
         audio.play()
         document.getElementById(`greaterHint${greaterHintNumber}`).innerHTML=output.innerHTML
        greaterHintNumber++
@@ -84,7 +84,7 @@ audio.play()
      }
     }
     else if (output.innerHTML>computerNumber){
-        var audio=new Audio("./surprised-child-voice-sound-113127.mp3")
+        var audio=new Audio("./ASSET/surprised-child-voice-sound-113127.mp3")
         audio.play()
         document.getElementById(`smallerHint${smallerHintNumber}`).innerHTML=output.innerHTML
        smallerHintNumber++
@@ -111,7 +111,7 @@ audio.play()
     
     var  one = document.getElementById("1")
      one.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+= one.innerHTML
      }
@@ -120,64 +120,64 @@ audio.play()
 
     var  two = document.getElementById("2")
     two.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+=two.innerHTML
     }
     var  three = document.getElementById("3")
        three.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+=three.innerHTML
        }
     var  four = document.getElementById("4")
     four.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+=four.innerHTML
     }
     var  five = document.getElementById("5")
     five.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+=five.innerHTML
     }
     var  six = document.getElementById("6")
     six.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+=six.innerHTML
     }
     var  seven = document.getElementById("7")
     seven.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+=seven.innerHTML
     }
     var  eight = document.getElementById("8")
     eight.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+=eight.innerHTML
     }
 
     var  nine = document.getElementById("9")
     nine.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+=nine.innerHTML
     }
 
     var  zero = document.getElementById("0")
     zero.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML+=zero.innerHTML
     }
 //  when we click clear the output number which is display on the screen wiil be remove
     var  clear = document.getElementById("clear")
     clear.onclick=()=>{
-        var audio=new Audio("./button-8-88355.mp3")
+        var audio=new Audio("./ASSET/button-8-88355.mp3")
 audio.play()
         output.innerHTML = ""
     }
