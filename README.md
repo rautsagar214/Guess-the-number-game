@@ -41,4 +41,3 @@ The idea of the game is  user have to guess the number which is given by the com
 
 1. I took icons from https://www.flaticon.com/search?word=REPLAY&color=color.
 2. sound effect and images  from https://pixabay.com.
-3. 
