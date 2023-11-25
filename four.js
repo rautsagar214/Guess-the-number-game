@@ -95,7 +95,7 @@ audio.play()
      if (lives==0){
         localStorage.setItem("moves" , moves)
 
-        window.location.href="./winner1.html"
+        window.location.href="./loser1.html"
      }
      
     }
