@@ -1,0 +1,209 @@
+
+    button{
+        height: 60px;
+        width: 80px;
+        gap: 30px;
+        background-color: burlywood;
+        box-shadow: 0px 2px 5px 0px rgb(0, 0, 0)inset;
+        border-radius: 5px;
+    }
+    .number{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        /* display: flex; */
+        margin-top:-90%;
+        margin-left:-165px;
+        /* margin-bottom: 10%; */
+
+        
+    }
+    body{
+        display: flex;
+        justify-content: space-around;
+        /* align-items: center; */
+        text-align: center;
+        position: relative;
+    }
+    #check{
+        border-radius: 10px;
+    }
+    .four-img{
+        height: 100vh;
+        /* margin-right: 100px; */
+    }
+    #back-button{
+    height: 40px;
+    margin-left:-50px;
+}
+    #randomNumber{
+        font-size: 40px;
+        /* position:sticky; */
+        overflow: hidden;
+    }
+    span{
+        color: red;
+        /* display: none; */
+        /* white-space:nowrap; */
+        height: 40px;
+    }
+    #greater{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+
+    }
+    #smaller{
+        display: flex;
+        flex-direction: column;
+    }
+    #hint{
+        display: flex;
+        gap: 300px;
+        margin-left: 120px;
+        margin-top: -50vh;
+    }
+    .live-div{
+        /* display: flex; */
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* text-align: center; */
+        /* margin-top: -60vh; */
+        /* margin-left: 100px; */
+        position: absolute;
+        top: 65px ;
+        left: 265px;
+        font-size: 20px;
+        border: 2px solid white;
+        color: red;
+    }
+    #randomNumber-div{
+        position: absolute;
+        top:220px ;
+        left: 240px;
+        height: 80px;
+        width: 300px;
+        overflow: auto;
+        color: red;
+    }
+    #number-pad{
+        margin-top: 10%;
+    }
+    .total{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+
+    #greater span , #smaller span{
+        font-size: 2vw;
+    }
+
+    h1{
+        font-size: 1.2vw;
+    }
+
+    @media all and (min-width:350px) and (max-width:800px){
+        body{
+            flex-direction: column;
+            justify-content: center;
+            padding: 5px;
+        }
+        #greater span , #smaller span{
+            font-size: 5vw;
+        }
+        .four-img{
+            height: 105vw;
+            width: 90vw;
+            margin-left: -20vw;
+        }
+        button{
+            width: 13vw;
+            height: 11vw;
+        }
+        .number{
+            margin-left: -20vw;
+            margin-bottom: 3.8vw;
+            margin-top: -64vw;
+        }
+        h1{
+            font-size: 3.8vw;
+        }
+        .row{
+            margin-bottom: -3.8vw;
+        }
+        #check{
+            width: 19vw;
+        }
+        #randomNumber{
+            margin-bottom: 20vw;
+        }
+        .clear{
+            width: 15vw;
+        }
+        #back-button{
+            height: 30px;
+            width: 30px;
+            margin-left: -1vh;
+
+        }
+        #hint{
+            gap: 25vw;
+            margin-top: -69vw;
+            margin-left: -21vw;
+            width: 84vw;
+            height: 48vw;
+        }
+        #randomNumber{
+            font-size: 5vw;
+        }
+        .live-div{
+            position: absolute;
+            top: 17vw;
+            left: 13vw;
+            font-size: 4.5vw;
+        }
+        h1{ 
+            margin-left: -27vw;
+            width: 90vw;
+            text-align: center;
+        }
+        #number-pad{
+        
+            margin-top: 2vw;
+            margin-left: -28vw;
+            height: 54vw;   
+    
+        }
+        .total{
+            margin-left: 23vw;
+            flex-direction: column;
+            gap: 0;
+            margin-left: 25vw;
+        }
+        #randomNumber-div{
+            left: 11vw;
+            overflow: auto;
+            width: 50vw;
+            top: 32vw;
+        }
+        .four-img-2{
+            margin-left: -24vw;
+            width: 85vw;
+        }
+        #greater{
+            margin-top: 10vw;
+            margin-left: 16vw;
+        }
+        #smaller{
+            margin-top: 10vw;
+            margin-left: 17vw;
+        }
+        button{
+            width: 12vw;
+            height: 9vw;
+        }
+        
+    }
+    

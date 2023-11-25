@@ -1,0 +1,76 @@
+
+    body{
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        /* margin-top: 65vh; */
+        display: flex;
+    
+
+
+    }
+    h1{
+    
+    }
+    div{
+        margin-top: 50px;
+    }
+#REPLY{
+    -webkit-transition:-webkit-transform 1s ;
+}
+#REPLY:hover{
+    -webkit-transform: rotate(360deg) translate(0) ;
+
+}
+.last-page{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    text-align: center;
+    gap: 350px;
+
+}
+#winner-img-1{
+  height: 100px;
+}
+.hat{
+    border: 2px solid white;
+}
+
+button{
+    width: 8vw;
+    border: none;
+    height: 3vw;
+    font-size: 1.2vw;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#game-over{
+    font-size: 100px;
+    color: green;
+}
+@media all and (min-width:350px)and (max-width:800px){
+    .body{
+        /* display: flex; */
+        flex-direction: column;
+    }
+    .last-page{
+        flex-direction: column;
+        gap: 0px;
+        margin-top: -10vw;
+    }
+    .hat{
+        height:50vw ;
+        /* position: relative; */ 
+    }
+    #game-over{
+        font-size: 10vw;
+    }
+    .result-image div{
+        margin: 0;
+    }button{
+        width: 19vw;
+    height: 7vw;
+    font-size: 4vw;
+    }
+}

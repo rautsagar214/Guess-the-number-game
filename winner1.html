@@ -3,75 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./winner1.css">
     <title>Document</title>
 </head>
-<style>
-    body{
-        justify-content: space-around;
-        text-align: center;
-        align-items: center;
-        /* margin-top: 65vh; */
-        display: flex;
-    
 
-
-    }
-    h1{
-    
-    }
-    div{
-        margin-top: 50px;
-    }
-#REPLY{
-    -webkit-transition:-webkit-transform 1s ;
-}
-#REPLY:hover{
-    -webkit-transform: rotate(360deg) translate(0) ;
-
-}
-.last-page{
-    display: flex;
-    /* justify-content: space-around; */
-    align-items: center;
-    text-align: center;
-    gap: 350px;
-
-}
-#winner-img-1{
-  height: 100px;
-}
-.hat{
-    border: 2px solid white;
-}
-
-button{
-    width: 8vw;
-    border: none;
-    height: 3vw;
-    font-size: 1.2vw;
-    border-radius: 10px;
-    cursor: pointer;
-}
-#game-over{
-    font-size: 100px;
-    color: green;
-}
-@media all and (min-width:350px)and (max-width:800px){
-    .body{
-        /* display: flex; */
-        flex-direction: column;
-    }
-    .last-page{
-        flex-direction: column;
-        gap: 0px;
-    }
-    .hat{
-        height:200px ;
-        /* position: relative; */
-    
-        
-    }
-}
  
  
 
@@ -103,29 +38,8 @@ button{
 </body>
 </html>
 
-<script>
-    phrases = ["You're a Champion!","Victory is Yours!","Bravo!"]
-    var randomphr = Math.floor(Math.random()*phrases.length)
-    document.getElementById("phra").innerHTML = phrases[randomphr]
-    const  replay = document.getElementById("REPLY")
-    replay.onclick = ()=>{
-        var audio=new Audio("./button-8-88355.mp3")
-audio.play()
-        window.location.href="./third.html"
-    }
-    document.getElementById("correct-number").innerHTML=localStorage.getItem("correct-number")
-    document.getElementById("moves").innerHTML=localStorage.getItem("moves")
-    
-    
-    window.addEventListener("DOMContentLoaded",()=>{
-    var backGroundMusic = document.getElementById("background-music")
-    Audio.volume=0.5
-    Audio.loop=true;
-    
-
-})
-   var userName= document.getElementById("username")
-   userName.innerHTML=localStorage.getItem("name")
+<script src="./winner1.js" >
+   
    
    </script>
 

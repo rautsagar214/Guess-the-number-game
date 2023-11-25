@@ -4,93 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="loser1.css">
 </head>
-<style>
-    body{
-        justify-content: space-around;
-        text-align: center;
-        align-items: center;
-        /* margin-top: 65vh; */
-        display: flex;
-    
 
-
-    }
-    h1{
-    
-    }
-    div{
-        margin-top: 50px;
-    }
-#REPLY{
-    -webkit-transition:-webkit-transform 1s ;
-}
-#REPLY:hover{
-    -webkit-transform: rotate(360deg) translate(0) ;
-
-}
-.last-page{
-    display: flex;
-    /* justify-content: space-around; */
-    align-items: center;
-    text-align: center;
-    gap: 350px;
-
-}
-#winner-img-1{
-  height: 100px;
-}
-.hat{
-    border: 2px solid white;
-}
-
-button{
-    width: 8vw;
-    border: none;
-    height: 3vw;
-    font-size: 1.2vw;
-    border-radius: 10px;
-    cursor: pointer;
-}
-#game-over{
-    font-size: 100px;
-    color: red;
-}
-@media all and (min-width:350px)and (max-width:800px){
-    .body{
-        /* display: flex; */
-        flex-direction: column;
-    }
-    .last-page{
-        flex-direction: column;
-        gap: 0px;
-    }
-    .hat{
-        /* height:200px ; */
-        /* position: relative; */
-        height: 240px;
-    margin-top: -75px;
-    width: 164px;
-        
-    }
-    #game-over{
-        font-size: 61px;
-        margin-top: -69px;
-    }
-}
- 
- 
-
-
-
-</style>
 <body style="background-color: black;">
     
   <div class="last-page" >
 
 
       <div class="result-image" >
-          <img   class="hat" src="Group 11.png"   height="500px" alt="">
+          <img   class="hat" src="Group 11.png" alt="">
           
 
     </div>
@@ -109,19 +32,7 @@ button{
 </body>
 </html>
 
-<script>
-    phrases =["Bounce Back Stronger!","Better Luck Next Round.","Game Well Played."]
-    const  replay = document.getElementById("REPLY")
-    replay.onclick = ()=>{
-        window.location.href="./third.html"
-    }
-    document.getElementById("correct-number").innerHTML=localStorage.getItem("correct-number")
-    document.getElementById("moves").innerHTML=localStorage.getItem("moves")
-
-var randomphr = Math.floor(Math.random()*phrases.length)
-document.getElementById("phra").innerHTML=phrases[randomphr]
-
-var user =   document.getElementById("user-name")
-user.innerHTML=localStorage.getItem("name")
+<script  src="loser1.js" >
+    
 
     </script>
