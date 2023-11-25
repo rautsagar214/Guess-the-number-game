@@ -1,3 +1,5 @@
+
+// // Here we keep phrases in the array and   selecting random phrase from the array .
 phrases =["Bounce Back Stronger!","Better Luck Next Round.","Game Well Played."]
     const  replay = document.getElementById("REPLY")
     replay.onclick = ()=>{

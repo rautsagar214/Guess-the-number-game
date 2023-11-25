@@ -19,8 +19,8 @@ backButton.onclick=()=>{
 // to add a background music
 window.addEventListener("DOMContentLoaded",()=>{
     var backGroundMusic = document.getElementById("background-music")
-    // backGroundMusic.volume=0.5
-    // backGroundMusic.loop=true;
+    backGroundMusic.volume=0.5
+    backGroundMusic.loop=true;
     
 
 })
