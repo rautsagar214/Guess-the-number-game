@@ -31,3 +31,19 @@ ol{
     margin-left: 13vw;
     font-size: 2.2vw;
 }
+
+@media all and (min-width:350px)and (max-width:800px){
+.INSTRUCTIONS{
+    margin-top: 50%;
+}
+ol{
+    font-size: 5vw;
+    margin-left: 3vw;
+}
+button{
+    margin-top: 10vw;
+}
+h1 , h2{
+    font-size: 8vw;
+}
+}
